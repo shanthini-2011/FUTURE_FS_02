@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRMmate | Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container { display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw; z-index: 10; position: relative;}
+        .login-card { width: 400px; padding: 40px; text-align: center; }
+        .login-logo { font-size: 28px; font-weight: 800; margin-bottom: 10px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+        .login-logo i { background: #111; color: #fff; padding: 8px; border-radius: 12px; font-size: 24px; box-shadow: 0 6px 15px rgba(0,0,0,0.2);}
+        .demo-credentials { margin-top: 25px; font-size: 12px; color: #8E8E93; background: rgba(255,255,255,0.6); padding: 12px; border-radius: 12px; border: 1px dashed #ccc; }
+    </style>
+</head>
+<body>
+    <div class="bg-shape shape-yellow dynamic-color"></div>
+    <div class="bg-shape shape-blue dynamic-color"></div>
+    <div class="bg-shape shape-pink dynamic-color"></div>
+
+    <div class="login-container">
+        <div class="glass-card login-card animate-3d-text">
+            <div class="login-logo">
+                <i class="ph-bold ph-chart-polar"></i>
+                <span class="animated-logo-text">CRMmate</span>
+            </div>
+            <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 14px; font-weight: 500;">Secure Admin Access</p>
+            
+            <form id="loginForm">
+                <div class="input-group" style="text-align: left;">
+                    <label>Admin Email</label>
+                    <input type="email" id="email" class="glass-input" placeholder="admin@ssltd.com" required>
+                </div>
+                <div class="input-group" style="text-align: left;">
+                    <label>Password</label>
+                    <input type="password" id="password" class="glass-input" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn add-btn w-100 justify-center hover-gradient" style="margin-top: 10px; padding: 14px; font-size: 15px;">Login to Dashboard</button>
+            </form>
+
+            <div class="demo-credentials">
+                <strong style="color: var(--text-dark);">Demo Access Credentials:</strong><br><br>
+                Email: <b>admin@ssltd.com</b> <br> Password: <b>admin123</b>
+            </div>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="toast-notification hidden" style="background: rgba(255, 245, 245, 0.9);">
+        <div class="toast-icon-wrapper" style="background: #EF4444;"><i class="ph-fill ph-warning-circle"></i></div>
+        <div class="toast-content">
+            <h4 id="toast-title" style="color: #DC2626;">Access Denied</h4>
+            <p id="toast-message">Incorrect Email or Password.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            
+            // Checking Credentials
+            if (email === 'admin@ssltd.com' && pass === 'admin123') {
+                // Success! Save session and redirect
+                localStorage.setItem('crm_auth', 'true');
+                window.location.href = 'index.html';
+            } else {
+                // Show Error
+                const toast = document.getElementById('custom-toast');
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('show'), 10);
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => toast.classList.add('hidden'), 400);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

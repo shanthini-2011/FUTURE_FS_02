@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRMmate | SS Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-shape shape-yellow dynamic-color"></div>
+    <div class="bg-shape shape-blue dynamic-color"></div>
+    <div class="bg-shape shape-pink dynamic-color"></div>
+
+    <div class="app-container glass-panel">
+        
+        <aside class="sidebar">
+            <div class="logo animate-3d-text">
+                <div class="logo-icon 3d-icon"><i class="ph-bold ph-chart-polar"></i></div>
+                <span class="animated-logo-text">CRMmate</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li class="animate-3d-text" style="animation-delay: 0.1s;"><a href="#" class="nav-btn"><i class="ph ph-squares-four 3d-icon"></i> Dashboard</a></li>
+                <li class="active animate-3d-text" style="animation-delay: 0.15s;"><a href="#" class="nav-btn"><i class="ph ph-users 3d-icon"></i> Leads</a></li>
+                <li class="animate-3d-text" style="animation-delay: 0.2s;"><a href="#" class="nav-btn"><i class="ph ph-check-square-offset 3d-icon"></i> Tasks</a></li>
+                <li class="animate-3d-text" style="animation-delay: 0.25s;"><a href="#" class="nav-btn"><i class="ph ph-buildings 3d-icon"></i> Accounts</a></li>
+                <li class="animate-3d-text" style="animation-delay: 0.3s;"><a href="#" class="nav-btn"><i class="ph ph-file-text 3d-icon"></i> Reports</a></li>
+            </ul>
+
+            <div class="sidebar-profile animate-3d-text" style="animation-delay: 0.4s;">
+                <img src="https://ui-avatars.com/api/?name=Shanthini+&background=F6C95E&color=000&bold=true" alt="Profile" class="profile-img avatar-3d">
+                <div class="profile-info">
+                    <h4>Shanthini</h4>
+                    <span class="role-badge">Admin</span>
+                </div>
+                <button class="logout-icon" id="logout-btn"><i class="ph ph-sign-out 3d-icon"></i></button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left animate-3d-text">
+                    <button class="icon-btn back-btn hover-color-change"><i class="ph ph-arrow-left 3d-icon"></i></button>
+                    <div class="header-titles">
+                        <h1 class="glow-text-hover">SS Ltd.</h1>
+                        <p>USA, 20-Insta street, Pincode: 092005</p>
+                    </div>
+                </div>
+                <div class="header-right animate-3d-text" style="animation-delay: 0.1s;">
+                    <button class="icon-btn hover-color-change" id="btn-settings"><i class="ph ph-gear 3d-icon"></i></button>
+                    <button class="icon-btn hover-color-change" id="btn-help"><i class="ph ph-question 3d-icon"></i></button>
+                    <button class="icon-btn hover-color-change" id="btn-bell"><i class="ph ph-bell 3d-icon"></i></button>
+                    <button class="btn add-btn hover-gradient" id="add-lead-main"><i class="ph ph-plus 3d-icon"></i> Add new lead</button>
+                </div>
+            </header>
+
+            <div class="section-title animate-3d-text" style="animation-delay: 0.2s;">Overall Performance</div>
+            <div class="overview-cards">
+                <div class="card glass-card yellow-glass card-3d animate-3d-text" style="animation-delay: 0.3s;">
+                    <div class="card-top-icon"><i class="ph ph-wallet 3d-icon"></i></div>
+                    <p class="card-label">Total Leads Value</p>
+                    <h2 class="card-value">0</h2>
+                    <p class="card-trend positive"><i class="ph-bold ph-trend-up"></i> +0% Last week</p>
+                </div>
+                <div class="card glass-card card-3d animate-3d-text" style="animation-delay: 0.4s;">
+                    <div class="card-top-icon text-blue"><i class="ph ph-phone-call 3d-icon"></i></div>
+                    <p class="card-label">Contacted Value</p>
+                    <h2 class="card-value">0</h2>
+                    <p class="card-trend positive"><i class="ph-bold ph-trend-up"></i> +0% Last week</p>
+                </div>
+                <div class="card glass-card card-3d animate-3d-text" style="animation-delay: 0.5s;">
+                    <div class="card-top-icon text-pink"><i class="ph ph-user-plus 3d-icon"></i></div>
+                    <p class="card-label">New Leads Value</p>
+                    <h2 class="card-value">0</h2>
+                    <p class="card-trend negative"><i class="ph-bold ph-trend-down"></i> -0% Last week</p>
+                </div>
+            </div>
+
+            <div class="middle-section">
+                <div class="target-wrapper animate-3d-text" style="animation-delay: 0.6s;">
+                    <div class="section-title">Conversion Methods</div>
+                    <div class="card-3d-wrapper explode-on-hover">
+                        <div class="card-layer layer-gray"></div>
+                        <div class="card-layer layer-pink"></div>
+                        <div class="card-layer layer-dark glass-card">
+                            <div class="card-top">
+                                <span>Universal Card</span>
+                                <i class="ph-fill ph-sim-card chip-icon 3d-icon"></i>
+                            </div>
+                            <h2 class="target-value">$8,523<small>.20</small></h2>
+                            <div class="card-bottom">
+                                <span class="card-num">**** **** **** 9423</span>
+                                <span class="card-brand">VISA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-wrapper animate-3d-text" style="animation-delay: 0.7s;">
+                    <div class="section-title flex-between">
+                        Recent activities <a href="#" class="view-all hover-color" id="btn-view-all">View all</a>
+                    </div>
+                    <ul class="recent-list glass-card" id="recent-activities-list">
+                        <li class="empty-state" style="text-align: center; color: #8E8E93; font-style: italic;">No recent activities. Add a lead!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-title animate-3d-text" style="margin-top: 20px; animation-delay: 0.8s;">Leads Pipeline</div>
+            <div class="table-container solid-table-card animate-3d-text" style="animation-delay: 0.9s;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Lead ID</th>
+                            <th>Lead Info</th>
+                            <th>Created</th>
+                            <th>Source</th>
+                            <th>Est. Value</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div id="add-modal" class="modal hidden">
+        <div class="modal-content glass-card modal-3d">
+            <div class="modal-header">
+                <h2>Add New Lead</h2>
+                <span class="close-x close-btn"><i class="ph ph-x 3d-icon"></i></span>
+            </div>
+            <form id="add-lead-form">
+                <div class="input-group">
+                    <label>Lead Name</label>
+                    <input type="text" id="add-name" class="glass-input" placeholder="E.g. Shanthini" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="add-email" class="glass-input" placeholder="e.g. shanthini@ssltd.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Source</label>
+                    <select id="add-source" class="glass-input">
+                        <option value="Website">Website Form</option>
+                        <option value="Referral">Referral</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn add-btn w-100 justify-center hover-gradient">+ Create Lead</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="update-modal" class="modal hidden">
+        <div class="modal-content glass-card modal-3d">
+            <div class="modal-header">
+                <h2>Review Lead Details</h2>
+                <span class="close-x close-btn"><i class="ph ph-x 3d-icon"></i></span>
+            </div>
+            <form id="update-form">
+                <div class="input-group">
+                    <label>Lead Stage</label>
+                    <select id="lead-status" class="glass-input">
+                        <option value="New">New</option>
+                        <option value="Contacted">Contacted</option>
+                        <option value="Converted">Converted</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Meeting / Call Notes</label>
+                    <textarea id="lead-notes" rows="4" class="glass-input" placeholder="Type discussion details..."></textarea>
+                </div>
+                <button type="submit" class="btn add-btn w-100 justify-center hover-gradient">Save Details</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="toast-notification hidden">
+        <div class="toast-icon-wrapper"><i class="ph-fill ph-info"></i></div>
+        <div class="toast-content">
+            <h4 id="toast-title">Notification</h4>
+            <p id="toast-message">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
