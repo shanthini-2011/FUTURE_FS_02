@@ -1,6 +1,9 @@
 # CRMmate - Full Stack Client Lead Management System
-## 🌐 Live Website Demo
-**Click here to view the live website:** https://shanthini-2011.github.io/FUTURE_FS_02/public/login.html
+🌐 Live Website Demo
+
+**Click here to view the live website:** [Click Here to Open CRMmate Live Demo](https://shanthini-2011.github.io/FUTURE_FS_02/public/login.html)
+
+A simple, elegant, and fully functional Mini CRM built to manage client leads.
 
 A simple, elegant, and fully functional Mini CRM built to manage client leads. This project features a modern 3D Glassmorphism UI and a robust backend supporting complete CRUD operations.
 
