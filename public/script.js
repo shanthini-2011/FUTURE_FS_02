@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     
+    // 🌐 INTHA LINE THAAN MUKKIYAM: Unga Render Backend URL
+    const API_URL = "https://future-fs-02-a8rl.onrender.com";
+
     // --- 0. SECURITY CHECK: Is user logged in? ---
     if (localStorage.getItem('crm_auth') !== 'true') {
         window.location.href = 'login.html'; // Login aagala na veliya anuppidu
@@ -77,10 +80,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let leadsData = []; 
     let leadToUpdateId = null; 
 
-    // URL Updated to '/api/leads'
+    // URL Updated to Use Live API
     async function fetchLeads() {
         try {
-            const response = await fetch('/api/leads'); // <-- LIVE URL UPDATE
+            const response = await fetch(`${API_URL}/api/leads`); // <-- LIVE URL UPDATE
             leadsData = await response.json();
             renderTable();
             updateStats();
@@ -186,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 if (confirmDelete) {
                     try {
-                        await fetch(`/api/leads/${leadId}`, { // <-- LIVE URL UPDATE
+                        await fetch(`${API_URL}/api/leads/${leadId}`, { // <-- LIVE URL UPDATE
                             method: 'DELETE'
                         });
                         fetchLeads(); 
@@ -209,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         try {
-            await fetch('/api/leads', { // <-- LIVE URL UPDATE
+            await fetch(`${API_URL}/api/leads`, { // <-- LIVE URL UPDATE
                 method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(newLead)
             });
             fetchLeads(); addForm.reset(); closeModals();
@@ -228,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         try {
-            await fetch(`/api/leads/${leadToUpdateId}`, { // <-- LIVE URL UPDATE
+            await fetch(`${API_URL}/api/leads/${leadToUpdateId}`, { // <-- LIVE URL UPDATE
                 method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(updatedData)
             });
             fetchLeads(); closeModals();
