@@ -4,12 +4,20 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+// Render-kku dynamic PORT thevai, illana 3000 use pannum
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// 🛡️ ITHU THAAN MUKKIYAM: CORS Security Code
+// Ithu unga GitHub Pages link-a mattum backend-kooda pesa allow pannum!
+app.use(cors({
+    origin: 'https://shanthini-2011.github.io', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 
-// ITHU THAAN MUKKIYAM: Public folder-a veliya kaattum code
+// Public folder-a veliya kaattum code
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Database Connection
@@ -67,5 +75,5 @@ app.delete('/api/leads/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`🚀 Server is running on http://localhost:${PORT}`);
+    console.log(`🚀 Server is running on port ${PORT}`);
 });
